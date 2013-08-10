@@ -1,5 +1,4 @@
 class InteractionsController < ApplicationController
-  before_filter :authenticate_user!
   before_action :set_interaction, only: [:show, :edit, :update, :destroy]
 
   # GET /interactions

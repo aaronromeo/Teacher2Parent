@@ -16,6 +16,8 @@ TeachersToParents::Application.routes.draw do
 
   resources :adhoc_messages
 
+  root 'messaging_centres#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

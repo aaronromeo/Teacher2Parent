@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :adhoc_messages
   has_one :student_class, :foreign_key => "teacher_id"
+  belongs_to :language
 end
