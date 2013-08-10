@@ -1,4 +1,5 @@
 TeachersToParents::Application.routes.draw do
+  devise_for :users
   resources :student_classes
 
   resources :students

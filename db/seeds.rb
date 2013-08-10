@@ -207,22 +207,22 @@ f.translations.create language_id: russian.id, comment: "Тетрадка в а�
 f.translations.create language_id: english.id, comment: "Notebook work is neat and organized"
 
 stephen = User.create first_name: "Mark", last_name: "Stephen", email: "aaron.romeo+mark@gmail.com", gender: "male",
-            role: "parent", language_id: english.id
+            role: "parent", language_id: english.id, password: 'SWTOEDU2013'
 roberts = User.create first_name: "June", last_name: "Roberts", email: "aaron.romeo+june@gmail.com", gender: "female",
-            role: "parent", language_id: english.id
+            role: "parent", language_id: english.id, password: 'SWTOEDU2013'
 amarman = User.create first_name: "Praak", last_name: "Amarman", email: "aaron.romeo+praak@gmail.com", gender: "male",
-            role: "parent", language_id: hindi.id
+            role: "parent", language_id: hindi.id, password: 'SWTOEDU2013'
 panpreet = User.create first_name: "Indira", last_name: "Panpreet", email: "aaron.romeo+akbal@gmail.com", gender: "female",
-            role: "parent", language_id: hindi.id
+            role: "parent", language_id: hindi.id, password: 'SWTOEDU2013'
 sharapova = User.create first_name: "Denis", last_name: "Sharapova", email: "aaron.romeo+denis@gmail.com", gender: "male",
-            role: "parent", language_id: russian.id
+            role: "parent", language_id: russian.id, password: 'SWTOEDU2013'
 chicherova = User.create first_name: "Yevgeniya", last_name: "Chicherova", email: "aaron.romeo+yevgeniya@gmail.com", gender: "female",
-            role: "parent", language_id: russian.id
+            role: "parent", language_id: russian.id, password: 'SWTOEDU2013'
 
 da = User.create first_name: "Tanya", last_name: "Da Silva", email: "aaron.romeo+tanya@gmail.com", gender: "female",
-            role: "teacher", language_id: english.id
+            role: "teacher", language_id: english.id, password: 'SWTOEDU2013'
 ka = User.create first_name: "Ragini", last_name: "Kashkina", email: "aaron.romeo+ragini@gmail.com", gender: "female",
-            role: "teacher", language_id: english.id
+            role: "teacher", language_id: english.id, password: 'SWTOEDU2013'
 
 sc_d = StudentClass.create name: "Grade 5 - Ms. Da Silva", teacher_id: da.id
 Student.create first_name: "Mohandas", last_name: "Amarman", student_class_id: sc_d.id, parent_id: amarman.id, gender: "male"
