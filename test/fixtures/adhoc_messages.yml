@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  isNew: false
+  student_id: 
+  user_id: 
+
+two:
+  isNew: false
+  student_id: 
+  user_id: 

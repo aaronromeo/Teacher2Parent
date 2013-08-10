@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  language_id: 
+  comment: MyText
+
+two:
+  language_id: 
+  comment: MyText

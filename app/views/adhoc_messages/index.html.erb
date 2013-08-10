@@ -1,0 +1,31 @@
+<h1>Listing adhoc_messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isnew</th>
+      <th>Student</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adhoc_messages.each do |adhoc_message| %>
+      <tr>
+        <td><%= adhoc_message.isNew %></td>
+        <td><%= adhoc_message.student %></td>
+        <td><%= adhoc_message.user %></td>
+        <td><%= link_to 'Show', adhoc_message %></td>
+        <td><%= link_to 'Edit', edit_adhoc_message_path(adhoc_message) %></td>
+        <td><%= link_to 'Destroy', adhoc_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adhoc message', new_adhoc_message_path %>

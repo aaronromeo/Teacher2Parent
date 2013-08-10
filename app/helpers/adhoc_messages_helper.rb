@@ -1,0 +1,2 @@
+module AdhocMessagesHelper
+end

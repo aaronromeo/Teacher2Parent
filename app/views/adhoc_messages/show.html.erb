@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isnew:</strong>
+  <%= @adhoc_message.isNew %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @adhoc_message.student %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @adhoc_message.user %>
+</p>
+
+<%= link_to 'Edit', edit_adhoc_message_path(@adhoc_message) %> |
+<%= link_to 'Back', adhoc_messages_path %>
