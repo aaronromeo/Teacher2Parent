@@ -32,7 +32,7 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="382" selection-end="382" vertical-scroll-proportion="0.5232558">
+            <state line="19" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.6627907">
               <folding />
             </state>
           </provider>
@@ -56,7 +56,6 @@
         <option value="$PROJECT_DIR$/config/locales/hi.yml" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/config/locales/devise.hi.yml" />
         <option value="$PROJECT_DIR$/config/locales/hi.bootstrap.yml" />
         <option value="$PROJECT_DIR$/config/locales/devise.ru.yml" />
@@ -64,6 +63,7 @@
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
         <option value="$PROJECT_DIR$/config/locales/simple_form.ru.yml" />
         <option value="$PROJECT_DIR$/config/locales/simple_form.hi.yml" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -867,7 +867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="382" selection-end="382" vertical-scroll-proportion="0.5232558">
+        <state line="19" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.6627907">
           <folding />
         </state>
       </provider>
