@@ -3,7 +3,7 @@ class Feedback < ActiveRecord::Base
 
   validates_presence_of :comment
   # validates_inclusion_of :criteria, :in => %w( ??? )
-  validates_inclusion_of :gender, :in => %w( m f )
+  validates_inclusion_of :gender, :in => %w( male female neutral ) #
 
   has_many :translations
 

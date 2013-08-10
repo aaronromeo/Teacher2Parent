@@ -24,7 +24,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-#gem 'simple_form'
+gem 'simple_form'
 #gem 'show_for'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

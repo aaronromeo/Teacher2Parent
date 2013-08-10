@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810155840) do
+ActiveRecord::Schema.define(version: 20130810182031) do
 
   create_table "adhoc_messages", force: true do |t|
     t.boolean  "isNew"
@@ -43,18 +43,51 @@ ActiveRecord::Schema.define(version: 20130810155840) do
 
   create_table "languages", force: true do |t|
     t.string   "code"
-    t.string   "name"
+    t.string   "english_name"
+    t.string   "native_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "student_classes", force: true do |t|
+    t.string   "name"
+    t.integer  "teacher_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "student_class_id"
+    t.string   "gender"
+    t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "students", ["parent_id"], name: "index_students_on_parent_id", using: :btree
+  add_index "students", ["student_class_id"], name: "index_students_on_student_class_id", using: :btree
 
   create_table "translations", force: true do |t|
     t.integer  "language_id"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "feedback_id"
   end
 
   add_index "translations", ["language_id"], name: "index_translations_on_language_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.integer  "language_id"
+    t.string   "gender"
+    t.string   "role"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

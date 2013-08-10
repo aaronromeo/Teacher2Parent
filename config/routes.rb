@@ -1,4 +1,10 @@
 TeachersToParents::Application.routes.draw do
+  resources :student_classes
+
+  resources :students
+
+  resources :users
+
   resources :languages
 
   resources :translations
