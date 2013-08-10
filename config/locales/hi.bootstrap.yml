@@ -3,16 +3,16 @@
 
 hi:
   helpers:
-    actions: "Actions"
+    actions: क्रियाएँ
     links:
-      back: "Back"
-      cancel: "Cancel"
-      confirm: "Are you sure?"
-      destroy: "Delete"
-      new: "New"
-      edit: "Edit"
+      back: "पिछला"
+      cancel: "रद्द"
+      confirm: "आप यकीन कर रहे हैं?"
+      destroy: "हटाएँ"
+      new: "नया"
+      edit: "संपादित करें"
     titles:
-      edit: "Edit %{model}"
-      save: "Save %{model}"
-      new: "New %{model}"
-      delete: "Delete %{model}"
+      edit: "संपादित करें %{model}"
+      save: "बचाना %{model}"
+      new: "नया %{model}"
+      delete: "हटाना%{model}"
