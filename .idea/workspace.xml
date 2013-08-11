@@ -60,10 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="364" column="2" selection-start="28259" selection-end="28259" vertical-scroll-proportion="0.6938776">
+            <state line="363" column="62" selection-start="28226" selection-end="28226" vertical-scroll-proportion="-6.1372547">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ru.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.07862408">
               <folding />
             </state>
           </provider>
@@ -152,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/language.rb" />
         <option value="$PROJECT_DIR$/app/models/feedback.rb" />
         <option value="$PROJECT_DIR$/app/models/interaction.rb" />
         <option value="$PROJECT_DIR$/app/models/adhoc_message.rb" />
@@ -168,6 +176,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css" />
         <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/config/locales/ru.yml" />
       </list>
     </option>
   </component>
@@ -1011,13 +1020,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/student_class.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="99" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
@@ -1143,7 +1145,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="2" selection-start="28259" selection-end="28259" vertical-scroll-proportion="0.6938776">
+        <state line="363" column="62" selection-start="28226" selection-end="28226" vertical-scroll-proportion="-6.1372547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.07862408">
           <folding />
         </state>
       </provider>

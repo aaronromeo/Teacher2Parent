@@ -20,4 +20,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
-  hello: "привет"
+  hello: "Здравствуйте"
+  message_parent: "Сообщение родителям"
+  message_teacher: "Сообщение учителю"
+  student:
+    student_name: "Имя и фамилия ученика"
+    student_class_name: "Класс"
+    student_parent_name: "Имя родителя"
+    student_parent_language: "Язык родителя"
+  feeback:
+    feeback_options: "Выберите сообщения, которые Вы хотели бы отправить"
+  sender_name: "Имя отправителя"
+  recipient_name: "Имя получителя"
+  sent_date: "Дата отправки"
+  grade: "Класс"
+  teacher: "Учитель"
+  parent: "Родитель"
+  learn_more: "Узнать подробнее"
+  comment: "Комментировать"
+  messaging: "Обмен сообщений"
+  read_by: "Кем прочитано"
+  posted_at: "Когда отправлено"

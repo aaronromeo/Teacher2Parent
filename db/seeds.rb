@@ -352,15 +352,15 @@ sonya = Student.create first_name: "Sonya", last_name: "Panpreet", student_class
 maria = Student.create first_name: "Maria", last_name: "Sharapova", student_class_id: sc_k.id, parent_id: sharapova.id, gender: "female"
 steph = Student.create first_name: "Steph", last_name: "Roberts", student_class_id: sc_k.id, parent_id: roberts.id, gender: "female"
 
-a1 = AdhocMessage.create student_id: mohandas.id, sender_id: ta.id, recipient_id: amarman.id
+a1 = AdhocMessage.create student_id: mohandas.id, sender_id: da.id, recipient_id: amarman.id
 a1.feedbacks << Feedback.find(1)
 a1.feedbacks << Feedback.find(11)
 a1.isNew = false
 a1.save
-a2 = AdhocMessage.create student_id: mohandas.id, sender_id: amarman.id, recipient_id: ta.id
+a2 = AdhocMessage.create student_id: mohandas.id, sender_id: amarman.id, recipient_id: da.id
 a2.feedbacks << Feedback.find(18)
 a2.isNew = false
 a2.save
-a3 = AdhocMessage.create student_id: mohandas.id, sender_id: ta.id, recipient_id: amarman.id
+a3 = AdhocMessage.create student_id: mohandas.id, sender_id: da.id, recipient_id: amarman.id
 a3.feedbacks << Feedback.find(3)
 
