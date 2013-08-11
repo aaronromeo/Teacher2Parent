@@ -1,9 +1,9 @@
 hi:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    "yes": 'हाा'
+    "no": 'नाा'
     required:
-      text: 'required'
+      text: 'चहाहिये'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
@@ -12,13 +12,13 @@ hi:
       default_message: "Some errors were found, please take a look:"
     # Labels and hints examples
     # labels:
-    #   password: 'Password'
+    #   password: 'पासअरद'
     #   user:
     #     new:
-    #       email: 'E-mail para efetuar o sign in.'
+    #       email: 'िमाेल.'
     #     edit:
-    #       email: 'E-mail.'
+    #       email: 'िमाेल.'
     # hints:
-    #   username: 'User name to sign in.'
-    #   password: 'No special characters, please.'
-
+    #   username: ूसेरनेम.'
+    #   password: 'कोई खास अक्षर नहीं, कृपया."
+'

@@ -1,59 +1,57 @@
-# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
-
 hi:
   devise:
     confirmations:
-      confirmed: "Your account was successfully confirmed. You are now signed in."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
+      confirmed: "आपका खाता सफलतापूर्वक पुष्टि की गई. अब आप में हस्ताक्षर किए हैं"
+      send_instructions: "आप कुछ ही मिनटों में अपने खाते की पुष्टि करने के बारे में निर्देश के साथ एक ईमेल प्राप्त होगा"
+      send_paranoid_instructions: "अपने ईमेल पते को हमारे डेटाबेस में मौजूद है, तो आप कुछ ही मिनटों में अपने खाते की पुष्टि करने के बारे में निर्देश के साथ एक ईमेल प्राप्त होगा"
     failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account was not activated yet."
-      invalid: "Invalid email or password."
-      invalid_token: "Invalid authentication token."
-      locked: "Your account is locked."
-      not_found_in_database: "Invalid email or password."
-      timeout: "Your session expired, please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
+      already_authenticated: "आप पहले से साइन इन कर रहे हैं"
+      inactive: "आपका खाता अभी तक सक्रिय नहीं किया गया था"
+      invalid: "अवैध ईमेल या पासवर्ड"
+      invalid_token: "अवैध प्रमाणीकरण टोकन."
+      locked: "आपका खाता बंद कर दिया है."
+      not_found_in_database: "अवैध ईमेल या पासवर्ड"
+      timeout: "आपका सत्र समाप्त हो, जारी रखने के लिए फिर से साइन इन करें."
+      unauthenticated: "तुम में हस्ताक्षर करने या जारी रखने से पहले साइन अप करने की आवश्यकता है"
+      unconfirmed: "आप जारी रखने से पहले अपने खाते की पुष्टि करने के लिए है."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "पुष्टिकरण निर्देश"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "पासवर्ड निर्देश रीसेट"
       unlock_instructions:
-        subject: "Unlock Instructions"
+        subject: "निर्देश अनलॉक"
     omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
+      failure: "आप सत्यापित नहीं कर सका"
+      success:"सफलतापूर्वक प्रमाणीकृत"
     passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
+      no_token: "आप एक पासवर्ड रीसेट ईमेल से आ रही बिना इस पृष्ठ का उपयोग नहीं कर सकते हैं. आप एक पासवर्ड रीसेट ईमेल से आया है, तो आप प्रदान की पूर्ण URL का उपयोग सुनिश्चित करें."
+      send_instructions: "आप कुछ ही मिनटों में अपने पासवर्ड को रिसेट करने के बारे में निर्देश के साथ एक ईमेल प्राप्त होगा"
+      send_paranoid_instructions: "आपके ईमेल पते को हमारे डेटाबेस में मौजूद है, तो आप कुछ ही मिनटों में आपके ईमेल पते पर एक पासवर्ड वसूली लिंक प्राप्त होगा."
+      updated: "आपका पासवर्ड सफलतापूर्वक बदल गया था. अब आप साइन इन कर रहे हैं"
+      updated_not_active: "आपका पासवर्ड सफलतापूर्वक बदल गया था."
     registrations:
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      updated: "You updated your account successfully."
+      destroyed: "अलविदा! आपका खाता सफलतापूर्वक रद्द कर दिया गया था. हम आपको जल्दी ही फिर से देखने की उम्मीद है."
+      signed_up: "आपका स्वागत है! आपने सफलतापूर्वक हस्ताक्षर किए हैं."
+      signed_up_but_inactive: "आपने सफलतापूर्वक हस्ताक्षर किए हैं. आपका खाता अभी तक सक्रिय नहीं है क्योंकि हालांकि, हम आपको साइन इन नहीं कर सकता है."
+      signed_up_but_locked: "आपने सफलतापूर्वक हस्ताक्षर किए हैं. अपने खाते बंद कर दिया है क्योंकि हालांकि, हम आपको साइन इन नहीं कर सकता."
+      signed_up_but_unconfirmed:"एक पुष्टिकरण लिंक के साथ एक संदेश अपने ईमेल पते पर भेजा गया है. अपने खाते को सक्रिय करने के लिए लिंक को खोलने के कृपया."
+      update_needs_confirmation:"आपने अपना खाता सफलतापूर्वक अद्यतन किया है, लेकिन हम अपने नए ईमेल पते को सत्यापित करने की जरूरत है. अपने ईमेल की जाँच और अपने नए ईमेल पते की पुष्टि को अंतिम रूप देने की पुष्टि के लिंक पर क्लिक करें."
+      updated: "आपने अपना खाता सफलतापूर्वक अपडेट किया गया."
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
+      signed_in: "सफलतापूर्वक में हस्ताक्षर किए गए."
+      signed_out: "सफलतापूर्वक बाहर हस्ताक्षर किए गए."
     unlocks:
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_instructions: "आप कुछ ही मिनटों में आपके खाते को अनलॉक करने के बारे में निर्देश के साथ एक ईमेल प्राप्त होगा."
+      send_paranoid_instructions: "आपके खाते में मौजूद है, तो आप कुछ ही मिनटों में इसे अनलॉक करने के बारे में निर्देश के साथ एक ईमेल प्राप्त होगा."
+      unlocked: "आपका खाता सफलतापूर्वक खुला है. जारी रखने के लिए साइन इन करें."
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      already_confirmed: "पहले से ही पुष्टि की गई थी, में हस्ताक्षर करने की कोशिश करें"
+      confirmation_period_expired: "% {अवधि} के भीतर होने की पुष्टि करने की जरूरत है, एक नया एक अनुरोध करें"
+      expired: "समाप्त हो गया है, एक नया एक अनुरोध करें"
+      not_found: "नहीं मिला"
+      not_locked: "बंद नहीं किया गया था"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "बचाने के लिए सक्षम नहीं"
+        other: ""बचाने के लिए सक्षम नहीं
