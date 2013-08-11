@@ -1,6 +1,6 @@
 <%= simple_form_for [@student, @adhoc_message], :html => { :class => 'form-horizontal' } do |f| %>
   <% @adhoc_message.feebacks do |feedback| %>
-    <%= Translate.where(:feedback_id => feedback.id && :language_id=>current_user.language_id) %>
+    <%= Translation.where(feedback_id => feedback.id && :language_id=>current_user.language_id) %>
   <% end %>
   <%= f.association :feedbacks, label: t('feeback.feeback_options'),
                     collection: @feedback_options, value_method: :feedback_id,

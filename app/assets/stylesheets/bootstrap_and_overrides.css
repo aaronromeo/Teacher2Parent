@@ -22,13 +22,17 @@ div.student-profile-image {
 	background-color: #5DBEA9;
 	font-family: "Myriad Pro";
 	font-size: 20px;
-	font-weight: bold;
+	text-shadow: none;
 }
 
 div.nav-collapse, div.navbar, div.navbar-inner {
 	background-color: #5DBEA9;
 }
 
+.navbar .brand {
+	color: #fff; /* text color */
+	text-shadow: none;
+}
 
 .student_name {
 	color: #3d3d3d; /* text color */
@@ -37,5 +41,10 @@ div.nav-collapse, div.navbar, div.navbar-inner {
 	font-weight: bold;
 }
 
+/*.student_grade {*/
+	/*color: #3d3d3d; *//* text color */
+	/*font-family: "Georgia";*/
+	/*font-size: 48px;*/
+/*}*/
 
 

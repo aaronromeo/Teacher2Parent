@@ -33,9 +33,10 @@
     <div class="col-lg-6">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <%= @subject.grade %>
+          <h3><%= @subject.grade %></h3>
         </div>
       </div>
+      <div></div>
       <div class="row">
         <div class="col-lg-12 text-center">
           <%= t('grade') %>
@@ -50,7 +51,7 @@
     <div class="col-lg-6">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <%= t('comment') %>
+          <h3><%= t('comment') %></h3>
         </div>
       </div>
       <div class="row">
@@ -68,11 +69,11 @@
               edit_student_path(@student), :class => 'btn' %>
   <%= link_to (current_user.role == 'teacher' ? t('message_parent') : t('message_teacher')),
               new_student_adhoc_message_path(@student), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <!--%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               student_path(@student),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger' %-->
 </div>
 
 <div class="">
@@ -95,6 +96,13 @@
         <td><%= admessage.sender.name %></td>
         <td><%= admessage.recipient.name %></td>
         <td><%= admessage.created_at %></td>
+        <td>
+          <ul>
+            <% admessage.feedbacks.each do |feedback| %>
+              <li><%= Translation.where("feedback_id= #{feedback.id} and language_id=#{current_user.language_id}").first.comment %></li>
+            <% end %>
+          </ul>
+        </td>
       </tr>
     <% end %>
     </tbody>

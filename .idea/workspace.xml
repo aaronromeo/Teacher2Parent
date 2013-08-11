@@ -11,11 +11,11 @@
     <file path="/20130810163358_add_feedback_id_to_translation.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376152526919" ignored="false" />
     <file path="/student_class.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376239392851" ignored="false" />
     <file path="/routes.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376170057771" ignored="false" />
-    <file path="/show.html.erb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376170157473" ignored="false" />
+    <file path="/show.html.erb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376250588471" ignored="false" />
     <file path="/_form.html.erb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376172472704" ignored="false" />
     <file path="/new.html.erb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376172901039" ignored="false" />
     <file path="/20130811012205_create_adhoc_messages_feedbacks.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376184230203" ignored="false" />
-    <file path="/a.dummy" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376234137032" ignored="false" />
+    <file path="/a.dummy" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376250814728" ignored="false" />
     <file path="/20130811160854_add_grade_to_student.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376237348619" ignored="false" />
     <file path="/translation.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376239429436" ignored="false" />
     <file path="/subject.rb" changelist="974be693-cdb7-41e6-85d4-88f54a6aaefd" time="1376243586487" ignored="false" />
@@ -51,10 +51,10 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/adhoc_messages/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="97" selection-start="242" selection-end="242" vertical-scroll-proportion="-1.25">
+            <state line="2" column="19" selection-start="164" selection-end="164" vertical-scroll-proportion="-1.25">
               <folding>
-                <marker date="1376234961000" expanded="true" signature="89:703" placeholder="do ... end" />
-                <marker date="1376234961000" expanded="true" signature="520:695" placeholder="..." />
+                <marker date="1376250929000" expanded="true" signature="89:704" placeholder="do ... end" />
+                <marker date="1376250929000" expanded="true" signature="521:696" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -69,34 +69,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ru.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ru.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.07862408">
+            <state line="22" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="41" selection-start="3115" selection-end="3115" vertical-scroll-proportion="-5.625">
+            <state line="53" column="38" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.79405034">
               <folding>
-                <marker date="1376248676000" expanded="true" signature="2113:2830" placeholder="..." />
-                <marker date="1376248676000" expanded="false" signature="2396:2415" placeholder="&quot;Message Parent&quot;" />
-                <marker date="1376248676000" expanded="false" signature="2418:2438" placeholder="&quot;Message Teacher&quot;" />
-                <marker date="1376248676000" expanded="true" signature="2882:3499" placeholder="..." />
-                <marker date="1376248676000" expanded="true" signature="2894:3060" placeholder="..." />
-                <marker date="1376248676000" expanded="true" signature="2903:3047" placeholder="..." />
-                <marker date="1376248676000" expanded="false" signature="2935:2951" placeholder="&quot;Sender Name&quot;" />
-                <marker date="1376248676000" expanded="false" signature="2974:2993" placeholder="&quot;Recipient Name&quot;" />
-                <marker date="1376248676000" expanded="false" signature="3016:3030" placeholder="&quot;Sent Date&quot;" />
-                <marker date="1376248676000" expanded="true" signature="3072:3488" placeholder="..." />
-                <marker date="1376248676000" expanded="true" signature="3098:3473" placeholder="do ... end" />
-                <marker date="1376248676000" expanded="true" signature="3173:3461" placeholder="..." />
-                <marker date="1376248676000" expanded="true" signature="3186:3309" placeholder="..." />
-                <marker date="1376248676000" expanded="true" signature="3190:3293" placeholder="if ... end" />
+                <marker date="1376252058000" expanded="true" signature="2149:2871" placeholder="..." />
+                <marker date="1376252058000" expanded="false" signature="2432:2451" placeholder="&quot;Message Parent&quot;" />
+                <marker date="1376252058000" expanded="false" signature="2454:2474" placeholder="&quot;Message Teacher&quot;" />
+                <marker date="1376252058000" expanded="true" signature="2554:2865" placeholder="&lt;%=...%&gt;" />
+                <marker date="1376252058000" expanded="true" signature="2923:3814" placeholder="..." />
+                <marker date="1376252058000" expanded="true" signature="2935:3101" placeholder="..." />
+                <marker date="1376252058000" expanded="true" signature="2944:3088" placeholder="..." />
+                <marker date="1376252058000" expanded="false" signature="2976:2992" placeholder="&quot;Sender Name&quot;" />
+                <marker date="1376252058000" expanded="false" signature="3015:3034" placeholder="&quot;Recipient Name&quot;" />
+                <marker date="1376252058000" expanded="false" signature="3057:3071" placeholder="&quot;Sent Date&quot;" />
+                <marker date="1376252058000" expanded="true" signature="3113:3803" placeholder="..." />
+                <marker date="1376252058000" expanded="true" signature="3139:3788" placeholder="do ... end" />
+                <marker date="1376252058000" expanded="true" signature="3214:3778" placeholder="..." />
+                <marker date="1376252058000" expanded="true" signature="3227:3350" placeholder="..." />
+                <marker date="1376252058000" expanded="true" signature="3231:3334" placeholder="if ... end" />
               </folding>
             </state>
           </provider>
@@ -105,7 +106,7 @@
       <file leaf-file-name="bootstrap_and_overrides.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+            <state line="43" column="0" selection-start="1056" selection-end="1172" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +124,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="42" selection-start="2115" selection-end="2115" vertical-scroll-proportion="-4.375">
+            <state line="48" column="25" selection-start="2194" selection-end="2199" vertical-scroll-proportion="-8.125">
               <folding>
                 <marker date="1376248489000" expanded="true" signature="2840:3302" placeholder="..." />
                 <marker date="1376248489000" expanded="true" signature="2888:3250" placeholder="..." />
@@ -145,7 +146,7 @@
       <file leaf-file-name="students_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+            <state line="69" column="9" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/feedback.rb" />
         <option value="$PROJECT_DIR$/app/models/interaction.rb" />
         <option value="$PROJECT_DIR$/app/models/adhoc_message.rb" />
         <option value="$PROJECT_DIR$/app/models/student_class.rb" />
@@ -173,10 +173,11 @@
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css" />
-        <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
+        <option value="$PROJECT_DIR$/app/views/adhoc_messages/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css" />
+        <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
       </list>
     </option>
   </component>
@@ -933,11 +934,11 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32896462" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496361" sideWeight="0.6002621" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39973786" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496361" sideWeight="0.6710354" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39973786" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1086,48 +1087,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+        <state line="363" column="62" selection-start="28226" selection-end="28226" vertical-scroll-proportion="-6.1372547">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/adhoc_messages/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="97" selection-start="242" selection-end="242" vertical-scroll-proportion="-1.25">
-          <folding>
-            <marker date="1376234961000" expanded="true" signature="89:703" placeholder="do ... end" />
-            <marker date="1376234961000" expanded="true" signature="520:695" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="41" selection-start="3115" selection-end="3115" vertical-scroll-proportion="-5.625">
-          <folding>
-            <marker date="1376248676000" expanded="true" signature="2113:2830" placeholder="..." />
-            <marker date="1376248676000" expanded="false" signature="2396:2415" placeholder="&quot;Message Parent&quot;" />
-            <marker date="1376248676000" expanded="false" signature="2418:2438" placeholder="&quot;Message Teacher&quot;" />
-            <marker date="1376248676000" expanded="true" signature="2882:3499" placeholder="..." />
-            <marker date="1376248676000" expanded="true" signature="2894:3060" placeholder="..." />
-            <marker date="1376248676000" expanded="true" signature="2903:3047" placeholder="..." />
-            <marker date="1376248676000" expanded="false" signature="2935:2951" placeholder="&quot;Sender Name&quot;" />
-            <marker date="1376248676000" expanded="false" signature="2974:2993" placeholder="&quot;Recipient Name&quot;" />
-            <marker date="1376248676000" expanded="false" signature="3016:3030" placeholder="&quot;Sent Date&quot;" />
-            <marker date="1376248676000" expanded="true" signature="3072:3488" placeholder="..." />
-            <marker date="1376248676000" expanded="true" signature="3098:3473" placeholder="do ... end" />
-            <marker date="1376248676000" expanded="true" signature="3173:3461" placeholder="..." />
-            <marker date="1376248676000" expanded="true" signature="3186:3309" placeholder="..." />
-            <marker date="1376248676000" expanded="true" signature="3190:3293" placeholder="if ... end" />
-          </folding>
+        <state line="22" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="42" selection-start="2115" selection-end="2115" vertical-scroll-proportion="-4.375">
+        <state line="48" column="25" selection-start="2194" selection-end="2199" vertical-scroll-proportion="-8.125">
           <folding>
             <marker date="1376248489000" expanded="true" signature="2840:3302" placeholder="..." />
             <marker date="1376248489000" expanded="true" signature="2888:3250" placeholder="..." />
@@ -1138,22 +1114,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+        <state line="69" column="9" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/adhoc_messages/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="363" column="62" selection-start="28226" selection-end="28226" vertical-scroll-proportion="-6.1372547">
+        <state line="2" column="19" selection-start="164" selection-end="164" vertical-scroll-proportion="-1.25">
+          <folding>
+            <marker date="1376250929000" expanded="true" signature="89:704" placeholder="do ... end" />
+            <marker date="1376250929000" expanded="true" signature="521:696" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1056" selection-end="1172" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+    <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.07862408">
-          <folding />
+        <state line="53" column="38" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.79405034">
+          <folding>
+            <marker date="1376252058000" expanded="true" signature="2149:2871" placeholder="..." />
+            <marker date="1376252058000" expanded="false" signature="2432:2451" placeholder="&quot;Message Parent&quot;" />
+            <marker date="1376252058000" expanded="false" signature="2454:2474" placeholder="&quot;Message Teacher&quot;" />
+            <marker date="1376252058000" expanded="true" signature="2554:2865" placeholder="&lt;%=...%&gt;" />
+            <marker date="1376252058000" expanded="true" signature="2923:3814" placeholder="..." />
+            <marker date="1376252058000" expanded="true" signature="2935:3101" placeholder="..." />
+            <marker date="1376252058000" expanded="true" signature="2944:3088" placeholder="..." />
+            <marker date="1376252058000" expanded="false" signature="2976:2992" placeholder="&quot;Sender Name&quot;" />
+            <marker date="1376252058000" expanded="false" signature="3015:3034" placeholder="&quot;Recipient Name&quot;" />
+            <marker date="1376252058000" expanded="false" signature="3057:3071" placeholder="&quot;Sent Date&quot;" />
+            <marker date="1376252058000" expanded="true" signature="3113:3803" placeholder="..." />
+            <marker date="1376252058000" expanded="true" signature="3139:3788" placeholder="do ... end" />
+            <marker date="1376252058000" expanded="true" signature="3214:3778" placeholder="..." />
+            <marker date="1376252058000" expanded="true" signature="3227:3350" placeholder="..." />
+            <marker date="1376252058000" expanded="true" signature="3231:3334" placeholder="if ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
