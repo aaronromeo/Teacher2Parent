@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  attr_accessible :avatar, :first_name, :last_name, :language_id, :gender, :role, :email, :password
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

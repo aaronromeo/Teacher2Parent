@@ -29,6 +29,11 @@ class AdhocMessagesController < ApplicationController
     @adhoc_message = AdhocMessage.new(adhoc_message_params)
     @adhoc_message.student_id = @student.id
     @adhoc_message.sender_id = current_user.id
+
+    params['adhoc_message']['feedback_ids'].each do |feedback_id|
+      @adhoc_message.feedbacks << Feedback.find(feedback_id) unless feedback_id.blank?
+    end
+
     if current_user.role == 'teacher'
       @adhoc_message.recipient_id = @student.parent.id
     else
@@ -37,7 +42,7 @@ class AdhocMessagesController < ApplicationController
 
     respond_to do |format|
       if @adhoc_message.save
-        format.html { redirect_to [@student, @adhoc_message], notice: 'Adhoc message was successfully created.' }
+        format.html { redirect_to @student, notice: 'Adhoc message was successfully created.' }
         format.json { render action: 'show', status: :created, location: @adhoc_message }
       else
         format.html { render action: 'new' }
@@ -76,7 +81,7 @@ class AdhocMessagesController < ApplicationController
     end
 
     def get_feedback_options
-      @feedback_options = Feedback.all
+      @feedback_options = Translation.where(:language_id=>current_user.language_id).all
     end
 
     # Use callbacks to share common setup or constraints between actions.

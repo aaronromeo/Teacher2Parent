@@ -5,3 +5,37 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+div.student-profile-image {
+	-moz-border-radius: 27px 27px 27px / 27px;
+	-webkit-border-radius: 27px 27px 27px / 27px;
+	border-radius: 27px 27px 27px / 27px; /* border radius */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; /* prevents bg color from leaking outside the border */
+	background-color: #6c6b6b; /* layer fill content */
+}
+
+
+.navbar .nav>li>a {
+	color: #fff; /* text color */
+	background-color: #5DBEA9;
+	font-family: "Myriad Pro";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+div.nav-collapse, div.navbar, div.navbar-inner {
+	background-color: #5DBEA9;
+}
+
+
+.student_name {
+	color: #3d3d3d; /* text color */
+	font-family: "Georgia";
+	font-size: 48px;
+	font-weight: bold;
+}
+
+
+

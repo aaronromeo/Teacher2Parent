@@ -24,6 +24,9 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem 'protected_attributes'
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+
 gem 'simple_form'
 #gem 'show_for'
 

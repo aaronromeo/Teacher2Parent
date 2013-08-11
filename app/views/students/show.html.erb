@@ -1,36 +1,102 @@
 <%- model_class = Student -%>
-<div class="page-header">
-  <h1><%= "#{@student.first_name} #{@student.last_name}" %></h1>
+<div class="row">
+  <div class="col-lg-4 text-center">
+      <img src="<%= @student.avatar.url(:medium) %>" class="img-rounded">
+  </div>
+  <div class="col-lg-8">
+    <div class="page-header">
+      <h1><div class='student_name'><%= "#{@student.first_name} #{@student.last_name}" %></div></h1>
+    </div>
+    <dl class="dl-horizontal">
+      <dt><strong><%= t('grade') %>:</strong></dt>
+      <dd><div class='student_grade'><%= @student.student_class.name %></div></dd>
+      <dt><strong><%= t('teacher') %>:</strong></dt>
+      <dd><%= @student.student_class.teacher.name %></dd>
+      <dt><strong><%= t('student.student_parent_name') %>:</strong></dt>
+      <dd><%= "#{@student.parent.first_name} #{@student.parent.last_name}" %></dd>
+      <dt><strong><%= t('student.student_parent_language') %>:</strong></dt>
+      <dd><%= @student.parent.language.english_name %></dd>
+    </dl>
+  </div>
 </div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= t('student.student_name') %>:</strong></dt>
-  <dd><%= "#{@student.first_name} #{@student.last_name}" %></dd>
-  <dt><strong><%= t('student.student_class_name') %>:</strong></dt>
-  <dd><%= @student.student_class.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
-  <dd><%= @student.gender.humanize %></dd>
-  <dt><strong><%= t('student.student_parent_name') %>:</strong></dt>
-  <dd><%= "#{@student.parent.first_name} #{@student.parent.last_name}" %></dd>
-  <dt><strong><%= t('student.student_parent_language') %>:</strong></dt>
-  <dd><%= @student.parent.language.english_name %></dd>
-</dl>
-
+<div class="row">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-1"><h3>&lt;</h3></div>
+    <div class="text-center col-lg-6">
+      <h3><%= t('grade') %> <%= @student.student_class.name %></h3>
+    </div>
+    <div class="col-lg-1"><h3>&gt;</h3></div>
+    <div class="col-lg-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <%= @subject.grade %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <%= t('grade') %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <%= t('learn_more') %>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <%= t('comment') %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <%= Translation.where(language_id: current_user.language_id, feedback_id: @subject.feedback).first.comment %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               root_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_student_path(@student), :class => 'btn' %>
-  <% if current_user.role == 'teacher' %>
-    <%= link_to t('message_parent'),
-                new_student_adhoc_message_path(@student), :class => 'btn' %>
-  <% else %>
-    <%= link_to t('message_teacher'),
-                edit_student_path(@student), :class => 'btn' %>
-  <% end %>
+  <%= link_to (current_user.role == 'teacher' ? t('message_parent') : t('message_teacher')),
+              new_student_adhoc_message_path(@student), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               student_path(@student),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+</div>
+
+<div class="">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th></th>
+      <th><%= t('sender_name') %></th>
+      <th><%= t('recipient_name') %></th>
+      <th><%= t('sent_date') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @admessages.each do |admessage| %>
+      <tr class="<%= admessage.isNew ? "warning" : "" %>">
+        <td><% if admessage.isNew %>
+            <span class="glyphicon glyphicon-envelope"></span>
+            <% end %>
+        </td>
+        <td><%= admessage.sender.name %></td>
+        <td><%= admessage.recipient.name %></td>
+        <td><%= admessage.created_at %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>

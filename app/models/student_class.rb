@@ -1,4 +1,5 @@
 class StudentClass < ActiveRecord::Base
+  attr_accessible :name, :teacher_id
 
   validates_presence_of :name
 

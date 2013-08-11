@@ -10,6 +10,12 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
+    @admessages = AdhocMessage.where(:student_id => params[:id]).order("created_at DESC")
+
+    subjects = @student.subjects
+
+    @subject = subjects[0]
+
   end
 
   # GET /students/new

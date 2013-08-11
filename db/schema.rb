@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130811012205) do
+ActiveRecord::Schema.define(version: 20130811175243) do
 
   create_table "adhoc_messages", force: true do |t|
     t.boolean  "isNew"
@@ -62,10 +62,28 @@ ActiveRecord::Schema.define(version: 20130811012205) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "grade"
+    t.text     "comment"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "students", ["parent_id"], name: "index_students_on_parent_id", using: :btree
   add_index "students", ["student_class_id"], name: "index_students_on_student_class_id", using: :btree
+
+  create_table "subjects", force: true do |t|
+    t.string   "name"
+    t.string   "grade"
+    t.integer  "student_id"
+    t.integer  "feedback_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "subjects", ["feedback_id"], name: "index_subjects_on_feedback_id", using: :btree
+  add_index "subjects", ["student_id"], name: "index_subjects_on_student_id", using: :btree
 
   create_table "translations", force: true do |t|
     t.integer  "language_id"
@@ -95,6 +113,10 @@ ActiveRecord::Schema.define(version: 20130811012205) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

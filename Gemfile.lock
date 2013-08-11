@@ -8,6 +8,16 @@ GIT
       rails (>= 3.1)
       railties (>= 3.1)
 
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 0b080eeeb34eb16cc2ba831ccbea3fb523e147af
+  specs:
+    paperclip (3.5.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.0)
+      mime-types
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,6 +49,10 @@ GEM
     atomic (1.1.12)
     bcrypt-ruby (3.1.1)
     builder (3.1.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -74,6 +88,8 @@ GEM
     orm_adapter (0.4.0)
     pg (0.16.0)
     polyglot (0.3.3)
+    protected_attributes (1.0.3)
+      activemodel (>= 4.0.0, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -136,7 +152,9 @@ DEPENDENCIES
   haml
   jbuilder (~> 1.2)
   jquery-rails
+  paperclip!
   pg
+  protected_attributes
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

@@ -29,6 +29,20 @@ en:
     student_class_name: "Class"
     student_parent_name: "Parent's Name"
     student_parent_language: "Parent's Language"
+  feeback:
+    feeback_options: "Select the messages you would like to send"
+  sender_name: "Sender Name"
+  recipient_name: "Recipient Name"
+  sent_date: "Sent Date"
+  grade: "Grade"
+  teacher: "Teacher"
+  parent: "Parent"
+  learn_more: "Learn More"
+  comment: "Comment"
+  messaging: "Messaging"
+  read_by: "Read By"
+  posted_at: "Posted At"
+  me: 'Me'
 
 #Homework	होमअरक	Домашние задания
 #Classroom Behaviour	कक्षा में व्यवहार	Поведение в классе

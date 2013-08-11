@@ -298,36 +298,69 @@ f.translations.create language_id: hindi.id, comment: "अपने डेस्
 f.translations.create language_id: russian.id, comment: "Парта грязная и неорганизованна "
 f.translations.create language_id: english.id, comment: "Desk area is messy and disorganized"
 
-stephen = User.create first_name: "Mark", last_name: "Stephen", email: "aaron.romeo+mark@gmail.com", gender: "male",
-            role: "parent", language_id: english.id, password: 'SWTOEDU2013'
+f = Feedback.create comment: "I understand. Thank you for letting me know.", criteria: "Parent response", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "हुमे समझ ााया, बताने के लिए धन्यवाद.है"
+f.translations.create language_id: russian.id, comment: "Сообщение понято, спасибо"
+f.translations.create language_id: english.id, comment: "I understand. Thank you for letting me know."
+
+f = Feedback.create comment: "I understand. I would like a follow up discussion.", criteria: "Parent response", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "हुमे समझ ााया, हम शिक्षक के साथ बात करना चाहते हैं"
+f.translations.create language_id: russian.id, comment: "Сообщение понято. Прошу назначить время встречи для дальнейшего обсуждения "
+f.translations.create language_id: english.id, comment: "I understand. I would like a follow up discussion."
+
+thompson = User.create first_name: "Mark", last_name: "Thompson", email: "english@gmail.com", gender: "male",
+            role: "parent", language_id: english.id, password: 'password'
 roberts = User.create first_name: "June", last_name: "Roberts", email: "aaron.romeo+june@gmail.com", gender: "female",
-            role: "parent", language_id: english.id, password: 'SWTOEDU2013'
-amarman = User.create first_name: "Praak", last_name: "Amarman", email: "aaron.romeo+praak@gmail.com", gender: "male",
-            role: "parent", language_id: hindi.id, password: 'SWTOEDU2013'
+            role: "parent", language_id: english.id, password: 'password'
+amarman = User.create first_name: "Praak", last_name: "Amarman", email: "hindi@gmail.com", gender: "male",
+            role: "parent", language_id: hindi.id, password: 'password'
 panpreet = User.create first_name: "Indira", last_name: "Panpreet", email: "aaron.romeo+akbal@gmail.com", gender: "female",
-            role: "parent", language_id: hindi.id, password: 'SWTOEDU2013'
+            role: "parent", language_id: hindi.id, password: 'password'
 sharapova = User.create first_name: "Denis", last_name: "Sharapova", email: "aaron.romeo+denis@gmail.com", gender: "male",
-            role: "parent", language_id: russian.id, password: 'SWTOEDU2013'
-chicherova = User.create first_name: "Yevgeniya", last_name: "Chicherova", email: "aaron.romeo+yevgeniya@gmail.com", gender: "female",
-            role: "parent", language_id: russian.id, password: 'SWTOEDU2013'
+            role: "parent", language_id: russian.id, password: 'password'
+chicherova = User.create first_name: "Yevgeniya", last_name: "Chicherova", email: "russian@gmail.com", gender: "female",
+            role: "parent", language_id: russian.id, password: 'password'
 
-da = User.create first_name: "Tanya", last_name: "Da Silva", email: "aaron.romeo+tanya@gmail.com", gender: "female",
-            role: "teacher", language_id: english.id, password: 'SWTOEDU2013'
-ka = User.create first_name: "Ragini", last_name: "Kashkina", email: "aaron.romeo+ragini@gmail.com", gender: "female",
-            role: "teacher", language_id: english.id, password: 'SWTOEDU2013'
+da = User.create first_name: "Tanya", last_name: "Da Silva", email: "teacher@gmail.com", gender: "female",
+            role: "teacher", language_id: english.id, password: 'password'
+ka = User.create first_name: "Ryan", last_name: "McGreggor", email: "aaron.romeo+ryan@gmail.com", gender: "female",
+            role: "teacher", language_id: english.id, password: 'password'
 
-sc_d = StudentClass.create name: "Grade 5 - Ms. Da Silva", teacher_id: da.id
-mohandas = Student.create first_name: "Mohandas", last_name: "Amarman", student_class_id: sc_d.id, parent_id: amarman.id, gender: "male"
+sc_d = StudentClass.create name: "5", teacher_id: da.id
+mohandas = Student.create first_name: "Mohandas", last_name: "Amarman", student_class_id: sc_d.id,
+                          parent_id: amarman.id, gender: "male", grade: "72%"
+mohandas.avatar = File.new("#{Rails.root}/db/seed_images/individuals-sample-2.jpg")
+mohandas.subjects << Subject.create(name: 'Math', grade: '72%', student_id: mohandas.id, feedback_id: 1)
+mohandas.subjects << Subject.create(name: 'English', grade: '82%', student_id: mohandas.id, feedback_id: 2)
+mohandas.subjects << Subject.create(name: 'Science', grade: '82%', student_id: mohandas.id, feedback_id: 3)
+mohandas.save
+
 sumeet = Student.create first_name: "Sumeet", last_name: "Panpreet", student_class_id: sc_d.id, parent_id: panpreet.id, gender: "female"
 anna = Student.create first_name: "Anna", last_name: "Sharapova", student_class_id: sc_d.id, parent_id: sharapova.id, gender: "female"
-yuri = Student.create first_name: "Yuri", last_name: "Chicherova", student_class_id: sc_d.id, parent_id: chicherova.id, gender: "male"
-charlie = Student.create first_name: "Charlie", last_name: "Stephen", student_class_id: sc_d.id, parent_id: stephen.id, gender: "male"
+yuri = Student.create first_name: "Yuri", last_name: "Chicherov", student_class_id: sc_d.id, parent_id: chicherova.id, gender: "male"
+yuri.avatar = File.new("#{Rails.root}/db/seed_images/child-teeth-dental-care.jpg")
+yuri.subjects << Subject.create(name: 'Math', grade: '62%', student_id: mohandas.id, feedback_id: 5)
+yuri.subjects << Subject.create(name: 'English', grade: '62%', student_id: mohandas.id, feedback_id: 5)
+yuri.subjects << Subject.create(name: 'Science', grade: '62%', student_id: mohandas.id, feedback_id: 5)
+yuri.save
+
+charlie = Student.create first_name: "Charlie", last_name: "Thompson", student_class_id: sc_d.id, parent_id: thompson.id, gender: "male"
 ella = Student.create first_name: "Ella", last_name: "Roberts", student_class_id: sc_d.id, parent_id: roberts.id, gender: "female"
 
-sc_k = StudentClass.create name: "Grade 4 - Ms. Kashkina", teacher_id: ka.id
+sc_k = StudentClass.create name: "4", teacher_id: ka.id
 sonya = Student.create first_name: "Sonya", last_name: "Panpreet", student_class_id: sc_k.id, parent_id: panpreet.id, gender: "female"
 maria = Student.create first_name: "Maria", last_name: "Sharapova", student_class_id: sc_k.id, parent_id: sharapova.id, gender: "female"
 steph = Student.create first_name: "Steph", last_name: "Roberts", student_class_id: sc_k.id, parent_id: roberts.id, gender: "female"
 
-#a = AdhocMessage.create student_id: mohandas.id, sender_id: da.id, recipient_id: amarman.id
+a1 = AdhocMessage.create student_id: mohandas.id, sender_id: ta.id, recipient_id: amarman.id
+a1.feedbacks << Feedback.find(1)
+a1.feedbacks << Feedback.find(11)
+a1.isNew = false
+a1.save
+a2 = AdhocMessage.create student_id: mohandas.id, sender_id: amarman.id, recipient_id: ta.id
+a2.feedbacks << Feedback.find(18)
+a2.isNew = false
+a2.save
+a3 = AdhocMessage.create student_id: mohandas.id, sender_id: ta.id, recipient_id: amarman.id
+a3.feedbacks << Feedback.find(3)
 

@@ -1,5 +1,12 @@
 <%= simple_form_for [@student, @adhoc_message], :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.association :feedbacks, label_method: :comment %>
+  <% @adhoc_message.feebacks do |feedback| %>
+    <%= Translate.where(:feedback_id => feedback.id && :language_id=>current_user.language_id) %>
+  <% end %>
+  <%= f.association :feedbacks, label: t('feeback.feeback_options'),
+                    collection: @feedback_options, value_method: :feedback_id,
+                    label_method: :comment,
+                    include_blank: false
+  %>
   <div class="form-actions">
     <%= f.submit 'Save', :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

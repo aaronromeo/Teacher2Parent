@@ -1,4 +1,6 @@
 class Feedback < ActiveRecord::Base
+  attr_accessible :comment, :criteria, :gender
+
   belongs_to :user
 
   validates_presence_of :comment
