@@ -3,7 +3,12 @@ class MessagingCentresController < ApplicationController
 
   # GET /messaging_centres
   # GET /messaging_centres.json
-  def index
+  def show
+    if current_user.role == 'parent'
+
+    elsif current_user.role == 'teacher'
+      @current_class = current_user.student_class
+    end
     #@messaging_centres = MessagingCentre.all
   end
 

@@ -1,26 +1,33 @@
 <%- model_class = Student -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%= "#{@student.first_name} #{@student.last_name}" %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
-  <dd><%= @student.first_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
-  <dd><%= @student.last_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:student_class_id) %>:</strong></dt>
-  <dd><%= @student.student_class_id %></dd>
+  <dt><strong><%= t('student.student_name') %>:</strong></dt>
+  <dd><%= "#{@student.first_name} #{@student.last_name}" %></dd>
+  <dt><strong><%= t('student.student_class_name') %>:</strong></dt>
+  <dd><%= @student.student_class.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
-  <dd><%= @student.gender %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:parent_id) %>:</strong></dt>
-  <dd><%= @student.parent_id %></dd>
+  <dd><%= @student.gender.humanize %></dd>
+  <dt><strong><%= t('student.student_parent_name') %>:</strong></dt>
+  <dd><%= "#{@student.parent.first_name} #{@student.parent.last_name}" %></dd>
+  <dt><strong><%= t('student.student_parent_language') %>:</strong></dt>
+  <dd><%= @student.parent.language.english_name %></dd>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              students_path, :class => 'btn'  %>
+              root_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_student_path(@student), :class => 'btn' %>
+  <% if current_user.role == 'teacher' %>
+    <%= link_to t('message_parent'),
+                new_student_adhoc_message_path(@student), :class => 'btn' %>
+  <% else %>
+    <%= link_to t('message_teacher'),
+                edit_student_path(@student), :class => 'btn' %>
+  <% end %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               student_path(@student),
               :method => 'delete',

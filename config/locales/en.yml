@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -21,3 +22,17 @@
 
 en:
   hello: "Hello"
+  message_parent: "Message Parent"
+  message_teacher: "Message Teacher"
+  student:
+    student_name: "Student's Name"
+    student_class_name: "Class"
+    student_parent_name: "Parent's Name"
+    student_parent_language: "Parent's Language"
+
+#Homework	होमअरक	Домашние задания
+#Classroom Behaviour	कक्षा में व्यवहार	Поведение в классе
+#School Yard Behaviour	खेल के मैदान में व्यवहार	Поведение во дворе школы
+#Attendance	स्कूल में उपस्थिति	Посещаемость
+#Academic Progress	शैक्षिक प्रगति	Учебные успехи
+#Parent response	माता - पिता से प्रतिक्रिया	Ответ родителей

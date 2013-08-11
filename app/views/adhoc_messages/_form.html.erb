@@ -1,29 +1,8 @@
-<%= form_for(@adhoc_message) do |f| %>
-  <% if @adhoc_message.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@adhoc_message.errors.count, "error") %> prohibited this adhoc_message from being saved:</h2>
-
-      <ul>
-      <% @adhoc_message.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :isNew %><br>
-    <%= f.check_box :isNew %>
-  </div>
-  <div class="field">
-    <%= f.label :student %><br>
-    <%= f.text_field :student %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+<%= simple_form_for [@student, @adhoc_message], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.association :feedbacks, label_method: :comment %>
+  <div class="form-actions">
+    <%= f.submit 'Save', :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                @student, :class => 'btn' %>
   </div>
 <% end %>

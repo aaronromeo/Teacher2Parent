@@ -7,6 +7,6 @@ class Feedback < ActiveRecord::Base
 
   has_many :translations
 
-  has_and_belongs_to_many :feedback
+  has_and_belongs_to_many :adhoc_messages
 
 end

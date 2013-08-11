@@ -11,35 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810191929) do
+ActiveRecord::Schema.define(version: 20130811012205) do
 
   create_table "adhoc_messages", force: true do |t|
     t.boolean  "isNew"
     t.integer  "student_id"
-    t.integer  "parent_id"
-    t.integer  "teacher_id"
+    t.integer  "recipient_id"
+    t.integer  "sender_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "adhoc_messages", ["student_id"], name: "index_adhoc_messages_on_student_id", using: :btree
 
+  create_table "adhoc_messages_feedbacks", id: false, force: true do |t|
+    t.integer "adhoc_message_id", null: false
+    t.integer "feedback_id",      null: false
+  end
+
+  add_index "adhoc_messages_feedbacks", ["adhoc_message_id", "feedback_id"], name: "ad_m_f_index", unique: true, using: :btree
+
   create_table "feedbacks", force: true do |t|
     t.text     "comment"
     t.string   "criteria"
     t.string   "gender"
-    t.integer  "interaction_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "interactions", force: true do |t|
-    t.integer  "initiated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "interactions", ["initiated_by_id"], name: "index_interactions_on_initiated_by_id", using: :btree
 
   create_table "languages", force: true do |t|
     t.string   "code"
@@ -74,7 +72,7 @@ ActiveRecord::Schema.define(version: 20130810191929) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "feedback_id"
+    t.integer  "feedback_id"
   end
 
   add_index "translations", ["language_id"], name: "index_translations_on_language_id", using: :btree

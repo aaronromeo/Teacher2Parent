@@ -196,15 +196,105 @@ hindi = Language.find_by code: "hi"
 russian = Language.find_by code: "ru"
 english = Language.find_by code: "en"
 
-f = Feedback.create comment: "Completes homework on time and with care", criteria: 'Homework', gender: 'neutral'
-f.translations.create language_id: hindi.id, comment: "समय पर और देखभाल के साथ होमवर्क पूरा करत"
-f.translations.create language_id: russian.id, comment: "Исполняет домашние задания в срок и с вниманием"
-f.translations.create language_id: english.id, comment: "Completes homework on time and with care"
+f = Feedback.create comment: "Completes homework on time and with care ", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "समय पर और देखभाल के साथ होमवर्क पूरा करता"
+f.translations.create language_id: russian.id, comment: "Исполняет домашние задания в срок и с вниманием "
+f.translations.create language_id: english.id, comment: "Completes homework on time and with care "
 
-f = Feedback.create comment: "Notebook work is neat and organized", criteria: 'Homework', gender: 'neutral'
-f.translations.create language_id: hindi.id, comment: "नोटबुक काम स्वच्छ और संगठित ह"
-f.translations.create language_id: russian.id, comment: "Тетрадка в аккуратном состояние и хорошо организована"
+
+f = Feedback.create comment: "Notebook work is neat and organized", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "नोटबुक काम स्वच्छ और संगठित है"
+f.translations.create language_id: russian.id, comment: "Тетрадка в аккуратном состояние и хорошо организована "
 f.translations.create language_id: english.id, comment: "Notebook work is neat and organized"
+
+
+f = Feedback.create comment: "Completes homework, however further attention to detail is needed ", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "होमअरक कारता हे, पर होमेअोरक को ङयादा दहयाान देना चिये"
+f.translations.create language_id: russian.id, comment: "Исполняет домашние задания, однако требуется больше внимание к деталям "
+f.translations.create language_id: english.id, comment: "Completes homework, however further attention to detail is needed "
+
+
+f = Feedback.create comment: "Completes simple assignments, however, fails to complete assignments that require sustained effort ", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "सरल कार्य को पूरा करता है, तथापि, निरंतर प्रयास करने की आवश्यकता है कि कार्य को पूरा करने में विफल रहता है"
+f.translations.create language_id: russian.id, comment: "Исполняет простые задания, однако, не выполнять задания, которые требуют больших усилий"
+f.translations.create language_id: english.id, comment: "Completes simple assignments, however, fails to complete assignments that require sustained effort "
+
+
+f = Feedback.create comment: "Assignments are complete however, presented in a disorganized manner", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "एसाइनमेंट पुरा कार रहे हे, मगर एसाइनमेंट अव्यवस्थित है"
+f.translations.create language_id: russian.id, comment: "Задании выполнены, но плохо организованы "
+f.translations.create language_id: english.id, comment: "Assignments are complete however, presented in a disorganized manner"
+
+
+f = Feedback.create comment: "Major assignment is late", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "ापने माजोर एसाइनमेंट को तािम से नहि खतम नहि किया "
+f.translations.create language_id: russian.id, comment: "Одно из основных заданий не закончено во-время"
+f.translations.create language_id: english.id, comment: "Major assignment is late"
+
+
+f = Feedback.create comment: "Homework is incomplete", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "होमअरक पुरा नहि हे "
+f.translations.create language_id: russian.id, comment: "Домашнее задание не закончено"
+f.translations.create language_id: english.id, comment: "Homework is incomplete"
+
+
+f = Feedback.create comment: "Forgets homework at home ", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "ापनेि होमअरक को घर पर छोड़ते हे "
+f.translations.create language_id: russian.id, comment: "Забывает домашние задания дома"
+f.translations.create language_id: english.id, comment: "Forgets homework at home "
+
+
+f = Feedback.create comment: "Fails to write in school agenda ", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "ापनि होमवर्क पत्रिका मे नाहि लिखते "
+f.translations.create language_id: russian.id, comment: "Не заполняет дневник"
+f.translations.create language_id: english.id, comment: "Fails to write in school agenda "
+
+
+f = Feedback.create comment: "Student is copying homework", criteria: "Homework", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "छात्र होमवर्क नकल है"
+f.translations.create language_id: russian.id, comment: "Студент списывает домашние задания у других студентов"
+f.translations.create language_id: english.id, comment: "Student is copying homework"
+
+
+f = Feedback.create comment: "Responsible and hardworking student ", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "जिम्मेदार और मेहनती छात्र है"
+f.translations.create language_id: russian.id, comment: "Ответственный и трудолюбивый студент"
+f.translations.create language_id: english.id, comment: "Responsible and hardworking student "
+
+
+f = Feedback.create comment: "Assumes his/her share of the work during group work", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "ागर टोली मे कााम कर रहे हे, तो ापनाा कााम ाचचहे से कर लेते हे "
+f.translations.create language_id: russian.id, comment: "Заканчивает свою часть работы когда работает в группе"
+f.translations.create language_id: english.id, comment: "Assumes his/her share of the work during group work"
+
+
+f = Feedback.create comment: "Demonstrates initiative in group work", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "टोली के काम में पहल लेता है"
+f.translations.create language_id: russian.id, comment: "Демонстрирует инициативу в групповой работе"
+f.translations.create language_id: english.id, comment: "Demonstrates initiative in group work"
+
+
+f = Feedback.create comment: "Addresses all teachers in a respectful manner", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "अपने शिक्षकों के सम्मान से बाात करते हे "
+f.translations.create language_id: russian.id, comment: "Обращается ко всем учителям с уважением"
+f.translations.create language_id: english.id, comment: "Addresses all teachers in a respectful manner"
+
+f = Feedback.create comment: "Student does not raise his hand to wait his turn to speak (shouting out during lessons and/or discussions)", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "कक्षा मे हाथ उठाकर नहि बाात करते, गलत समय पर बाात करते हे"
+f.translations.create language_id: russian.id, comment: "Студент не поднимает руку, для участия в дискуссии (кричит во время уроков и / или обсуждения)"
+f.translations.create language_id: english.id, comment: "Student does not raise his hand to wait his turn to speak (shouting out during lessons and/or discussions)"
+
+
+f = Feedback.create comment: "Has trouble getting along with classmates", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "सहपाठियों के साथ नहीं मिलता है"
+f.translations.create language_id: russian.id, comment: "Имеет проблемы в отношениях с одноклассниками"
+f.translations.create language_id: english.id, comment: "Has trouble getting along with classmates"
+
+
+f = Feedback.create comment: "Desk area is messy and disorganized", criteria: "Classroom Behaviour", gender: 'neutral'
+f.translations.create language_id: hindi.id, comment: "अपने डेस्क को गंदा और अव्यवस्थित  रखते है"
+f.translations.create language_id: russian.id, comment: "Парта грязная и неорганизованна "
+f.translations.create language_id: english.id, comment: "Desk area is messy and disorganized"
 
 stephen = User.create first_name: "Mark", last_name: "Stephen", email: "aaron.romeo+mark@gmail.com", gender: "male",
             role: "parent", language_id: english.id, password: 'SWTOEDU2013'
@@ -225,15 +315,17 @@ ka = User.create first_name: "Ragini", last_name: "Kashkina", email: "aaron.rome
             role: "teacher", language_id: english.id, password: 'SWTOEDU2013'
 
 sc_d = StudentClass.create name: "Grade 5 - Ms. Da Silva", teacher_id: da.id
-Student.create first_name: "Mohandas", last_name: "Amarman", student_class_id: sc_d.id, parent_id: amarman.id, gender: "male"
-Student.create first_name: "Sumeet", last_name: "Panpreet", student_class_id: sc_d.id, parent_id: panpreet.id, gender: "female"
-Student.create first_name: "Anna", last_name: "Sharapova", student_class_id: sc_d.id, parent_id: sharapova.id, gender: "female"
-Student.create first_name: "Yuri", last_name: "Chicherova", student_class_id: sc_d.id, parent_id: chicherova.id, gender: "male"
-Student.create first_name: "Charlie", last_name: "Stephen", student_class_id: sc_d.id, parent_id: stephen.id, gender: "male"
-Student.create first_name: "Ella", last_name: "Roberts", student_class_id: sc_d.id, parent_id: roberts.id, gender: "female"
+mohandas = Student.create first_name: "Mohandas", last_name: "Amarman", student_class_id: sc_d.id, parent_id: amarman.id, gender: "male"
+sumeet = Student.create first_name: "Sumeet", last_name: "Panpreet", student_class_id: sc_d.id, parent_id: panpreet.id, gender: "female"
+anna = Student.create first_name: "Anna", last_name: "Sharapova", student_class_id: sc_d.id, parent_id: sharapova.id, gender: "female"
+yuri = Student.create first_name: "Yuri", last_name: "Chicherova", student_class_id: sc_d.id, parent_id: chicherova.id, gender: "male"
+charlie = Student.create first_name: "Charlie", last_name: "Stephen", student_class_id: sc_d.id, parent_id: stephen.id, gender: "male"
+ella = Student.create first_name: "Ella", last_name: "Roberts", student_class_id: sc_d.id, parent_id: roberts.id, gender: "female"
 
 sc_k = StudentClass.create name: "Grade 4 - Ms. Kashkina", teacher_id: ka.id
-Student.create first_name: "Sonya", last_name: "Panpreet", student_class_id: sc_k.id, parent_id: panpreet.id, gender: "female"
-Student.create first_name: "Maria", last_name: "Sharapova", student_class_id: sc_k.id, parent_id: sharapova.id, gender: "female"
-Student.create first_name: "Steph", last_name: "Roberts", student_class_id: sc_k.id, parent_id: roberts.id, gender: "female"
+sonya = Student.create first_name: "Sonya", last_name: "Panpreet", student_class_id: sc_k.id, parent_id: panpreet.id, gender: "female"
+maria = Student.create first_name: "Maria", last_name: "Sharapova", student_class_id: sc_k.id, parent_id: sharapova.id, gender: "female"
+steph = Student.create first_name: "Steph", last_name: "Roberts", student_class_id: sc_k.id, parent_id: roberts.id, gender: "female"
+
+#a = AdhocMessage.create student_id: mohandas.id, sender_id: da.id, recipient_id: amarman.id
 

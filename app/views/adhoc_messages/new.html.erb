@@ -1,5 +1,5 @@
-<h1>New adhoc_message</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', adhoc_messages_path %>
+<%- model_class = AdhocMessage -%>
+<div class="page-header">
+  <h1><%= "#{@student.first_name} #{@student.last_name}".camelcase %></h1>
+</div>
+<%= render :partial => 'form' %>

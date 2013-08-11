@@ -4,7 +4,6 @@ class CreateFeedbacks < ActiveRecord::Migration
       t.text :comment
       t.string :criteria
       t.string :gender
-      t.references :interaction
 
       t.timestamps
     end

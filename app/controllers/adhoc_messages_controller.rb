@@ -1,4 +1,6 @@
 class AdhocMessagesController < ApplicationController
+  before_action :set_student
+  before_action :get_feedback_options
   before_action :set_adhoc_message, only: [:show, :edit, :update, :destroy]
 
   # GET /adhoc_messages
@@ -25,10 +27,17 @@ class AdhocMessagesController < ApplicationController
   # POST /adhoc_messages.json
   def create
     @adhoc_message = AdhocMessage.new(adhoc_message_params)
+    @adhoc_message.student_id = @student.id
+    @adhoc_message.sender_id = current_user.id
+    if current_user.role == 'teacher'
+      @adhoc_message.recipient_id = @student.parent.id
+    else
+      @adhoc_message.recipient_id = @student.student_class.teacher.id
+    end
 
     respond_to do |format|
       if @adhoc_message.save
-        format.html { redirect_to @adhoc_message, notice: 'Adhoc message was successfully created.' }
+        format.html { redirect_to [@student, @adhoc_message], notice: 'Adhoc message was successfully created.' }
         format.json { render action: 'show', status: :created, location: @adhoc_message }
       else
         format.html { render action: 'new' }
@@ -42,7 +51,7 @@ class AdhocMessagesController < ApplicationController
   def update
     respond_to do |format|
       if @adhoc_message.update(adhoc_message_params)
-        format.html { redirect_to @adhoc_message, notice: 'Adhoc message was successfully updated.' }
+        format.html { redirect_to [@student, @adhoc_message], notice: 'Adhoc message was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -62,6 +71,14 @@ class AdhocMessagesController < ApplicationController
   end
 
   private
+    def set_student
+      @student = Student.find(params[:student_id])
+    end
+
+    def get_feedback_options
+      @feedback_options = Feedback.join(:)
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_adhoc_message
       @adhoc_message = AdhocMessage.find(params[:id])

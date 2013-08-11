@@ -2,19 +2,20 @@ TeachersToParents::Application.routes.draw do
   devise_for :users
   resources :student_classes
 
-  resources :students
+  resources :students do
+    resources :adhoc_messages
+  end
 
-  resources :users
+  resources :interactions
+
+  resources :users, only: [:show]
 
   resources :languages
 
   resources :translations
 
-  resources :interactions
-
   resources :feedbacks
 
-  resources :adhoc_messages
 
   root 'messaging_centres#show'
 
