@@ -1,4 +1,5 @@
 class FeedbacksController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_feedback, only: [:show, :edit, :update, :destroy]
 
   # GET /feedbacks

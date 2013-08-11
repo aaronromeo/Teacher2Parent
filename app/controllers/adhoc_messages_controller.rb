@@ -76,7 +76,7 @@ class AdhocMessagesController < ApplicationController
     end
 
     def get_feedback_options
-      @feedback_options = Feedback.join(:)
+      @feedback_options = Feedback.all
     end
 
     # Use callbacks to share common setup or constraints between actions.

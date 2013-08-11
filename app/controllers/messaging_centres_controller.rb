@@ -5,10 +5,11 @@ class MessagingCentresController < ApplicationController
   # GET /messaging_centres.json
   def show
     if current_user.role == 'parent'
-
+      @students = current_user.students
     elsif current_user.role == 'teacher'
-      @current_class = current_user.student_class
+      @students = current_user.student_class.students.all
     end
+    true
     #@messaging_centres = MessagingCentre.all
   end
 

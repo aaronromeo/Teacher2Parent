@@ -6,5 +6,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :adhoc_messages
   has_one :student_class, :foreign_key => "teacher_id"
+  has_many :students, :foreign_key => "parent_id"
+
   belongs_to :language
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

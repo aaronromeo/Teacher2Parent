@@ -1,4 +1,5 @@
 # encoding: UTF-8
+#
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -278,6 +279,7 @@ f = Feedback.create comment: "Addresses all teachers in a respectful manner", cr
 f.translations.create language_id: hindi.id, comment: "अपने शिक्षकों के सम्मान से बाात करते हे "
 f.translations.create language_id: russian.id, comment: "Обращается ко всем учителям с уважением"
 f.translations.create language_id: english.id, comment: "Addresses all teachers in a respectful manner"
+
 
 f = Feedback.create comment: "Student does not raise his hand to wait his turn to speak (shouting out during lessons and/or discussions)", criteria: "Classroom Behaviour", gender: 'neutral'
 f.translations.create language_id: hindi.id, comment: "कक्षा मे हाथ उठाकर नहि बाात करते, गलत समय पर बाात करते हे"
