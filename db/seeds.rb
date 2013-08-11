@@ -364,3 +364,15 @@ a2.save
 a3 = AdhocMessage.create student_id: mohandas.id, sender_id: da.id, recipient_id: amarman.id
 a3.feedbacks << Feedback.find(3)
 
+a1 = AdhocMessage.create student_id: yuri.id, sender_id: da.id, recipient_id: chicherova.id
+a1.feedbacks << Feedback.find(1)
+a1.feedbacks << Feedback.find(11)
+a1.isNew = false
+a1.save
+a2 = AdhocMessage.create student_id: yuri.id, sender_id: chicherova.id, recipient_id: da.id
+a2.feedbacks << Feedback.find(18)
+a2.isNew = false
+a2.save
+a3 = AdhocMessage.create student_id: yuri.id, sender_id: da.id, recipient_id: chicherova.id
+a3.feedbacks << Feedback.find(3)
+
